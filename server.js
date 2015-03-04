@@ -12,6 +12,7 @@ DataFetcher.setNetatmoStore(NetatmoStore);
 DataFetcher.setWeatherStore(WeatherStore);
 DataFetcher.start();
 
+var port = process.env.PORT || 3000;
 var server = http.createServer();
 var io = require('socket.io')(server);
 io.on('connection', function(socket){
@@ -19,7 +20,8 @@ io.on('connection', function(socket){
   socket.emit('change', getAllData());
   socket.on('disconnect', function(){ console.log("Goodbye Client...") });
 });
-server.listen(process.env.PORT || 3000);
+server.listen(port);
+console.log("Socket server listening on "+port)
 
 NetatmoStore.addChangeListener(emitData);
 TransportStore.addChangeListener(emitData);
