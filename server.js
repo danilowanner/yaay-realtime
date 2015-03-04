@@ -19,7 +19,7 @@ io.on('connection', function(socket){
   socket.emit('change', getAllData());
   socket.on('disconnect', function(){ console.log("Goodbye Client...") });
 });
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
 
 NetatmoStore.addChangeListener(emitData);
 TransportStore.addChangeListener(emitData);
