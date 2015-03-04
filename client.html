@@ -4,7 +4,7 @@
   <title>Y A A Y Realtime Client</title>
   <script src="https://cdn.socket.io/socket.io-1.3.4.js"></script>
   <script>
-    var socket = io('http://yaayrealtime.yaayapp.ch:3000');
+    var socket = io('http://realtime.yaayapp.ch:80'); // http://localhost:3000
       socket.on('connect', function(){});
       socket.on('change', function(data){
         document.getElementById("data").innerHTML = JSON.stringify(data);

@@ -11,7 +11,8 @@
     "node-schedule": "latest",
     "object-assign": "latest",
     "weather": "0.1.0",
-    "socket.io": "1.3.5"
+    "socket.io": "1.3.5",
+    "timezone": "latest"
   },
   "devDependencies": {
   },

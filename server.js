@@ -38,6 +38,6 @@ function getAllData() {
 }
 function emitData() {
   console.log("Emit data")
+  console.log(getAllData())
   io.emit('change', getAllData());
 }
-
