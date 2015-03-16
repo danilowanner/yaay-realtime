@@ -30,6 +30,7 @@ WeatherStore.addChangeListener(emitData);
 
 function getAllData() {
   return {
+    date: new Date(),
     netatmo: NetatmoStore.getNewest(),
     transport: TransportStore.getNewest(),
     rhine: RhineStore.getNewest(),
