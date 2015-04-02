@@ -1,4 +1,6 @@
 var http = require('http')
+var tz = require("timezone");
+var eu = tz(require("timezone/Europe"));
 
 var DataFetcher = require('./lib/DataFetcher')
 var TransportStore = require('./lib/stores/TransportStore')
@@ -30,9 +32,12 @@ WeatherStore.addChangeListener(emitData);
 
 function getAllData() {
   var date = new Date();
+  var baselTzOffsetString = eu(date, "%:z", "Europe/Zurich");
+  var baselTzOffsetParts = baselTzOffsetString.substr(1).split(":")
+  var baselTzOffset = parseInt(baselTzOffsetParts[0])*60 + parseInt(baselTzOffsetParts[1]);
   return {
     date: date,
-    timezoneOffset: date.getTimezoneOffset(),
+    baselTzOffset: baselTzOffset,
     netatmo: NetatmoStore.getNewest(),
     transport: TransportStore.getNewest(),
     rhine: RhineStore.getNewest(),
