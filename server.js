@@ -32,11 +32,7 @@ function getAllData() {
   var date = new Date();
   return {
     date: date,
-    watch: {
-      hours: date.getHours(),
-      minutes: date.getMinutes(),
-      seconds: date.getSeconds()
-    },
+    timezoneOffset: date.getTimezoneOffset(),
     netatmo: NetatmoStore.getNewest(),
     transport: TransportStore.getNewest(),
     rhine: RhineStore.getNewest(),
