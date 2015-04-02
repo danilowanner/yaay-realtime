@@ -29,8 +29,14 @@ RhineStore.addChangeListener(emitData);
 WeatherStore.addChangeListener(emitData);
 
 function getAllData() {
+  var date = new Date();
   return {
-    date: new Date(),
+    date: date,
+    watch: {
+      hours: date.getHours(),
+      minutes: date.getMinutes(),
+      seconds: date.getSeconds()
+    },
     netatmo: NetatmoStore.getNewest(),
     transport: TransportStore.getNewest(),
     rhine: RhineStore.getNewest(),
