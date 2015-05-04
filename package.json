@@ -5,7 +5,7 @@
   "main": "server.js",
   "private": true,
   "dependencies": {
-    "node-netatmo": "0.0.6",
+    "netatmo": "1.1.1",
     "request": "2.54.0",
     "es6-promise": "2.0.1",
     "node-schedule": "0.2.6",
