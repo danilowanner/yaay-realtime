@@ -5,7 +5,7 @@
   "main": "server.js",
   "private": true,
   "dependencies": {
-    "netatmo": "1.1.1",
+    "netatmo": "git@github.com:danilowanner/netatmo.git#6b1af9e92387df478e5d873b4b0db8c0eeae1ac1",
     "request": "2.54.0",
     "es6-promise": "2.0.1",
     "node-schedule": "0.2.6",
