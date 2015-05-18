@@ -35,6 +35,7 @@ function getAllData() {
   var baselTzOffsetString = eu(date, "%:z", "Europe/Zurich");
   var baselTzOffsetParts = baselTzOffsetString.substr(1).split(":")
   var baselTzOffset = parseInt(baselTzOffsetParts[0])*60 + parseInt(baselTzOffsetParts[1]);
+  
   return {
     date: date,
     baselTzOffset: baselTzOffset,
