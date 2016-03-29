@@ -10,7 +10,6 @@
     "es6-promise": "2.0.1",
     "node-schedule": "0.2.6",
     "object-assign": "2.0.0",
-    "weather": "0.1.0",
     "socket.io": "1.3.5",
     "timezone": "0.0.39",
     "suncalc": "1.6.0"
