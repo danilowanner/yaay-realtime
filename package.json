@@ -1,6 +1,6 @@
 {
   "name": "yaay-realtime",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "YAAY real time data api",
   "main": "server.js",
   "private": true,
